@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "myfont";
+    color: red;
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url(../fonts/Trash___.ttf);
+}
+
+h2 {
+    font-size: 5.8rem;
+    text-align: center;
+}
+
+/* HEADER */
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: red;
+}
+
+header img {
+    width: 150px;
+    margin-right: 110px;
+}
+
+#bgImg {
+    background-image: 
+    linear-gradient(to top, black, transparent),
+    url(../img/firstBgImg.jpg);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+header h2 {
+    font-size: 5.8rem;
+    position: absolute;
+    bottom: 50px;
+    left: 35%;
+    width: 35%;
+}
+
+/* MAIN 
+
+PREMIERE SECTION */
+
+#bgImg2 {
+    background-image: linear-gradient(to left, black, transparent),
+    url(../img/secondBgImg.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+article {
+    width: 35%;
+    margin-left: 60%;
+    padding-top: 100px;
+    margin-right: 50px;
+}
+
+#bgImg2 p {
+    padding-top: 50px;
+    font-size: 1.8rem;
+}
+
+/* DEUXIEME SECTION */
+
+#F {
+    font-family: "myfont";
+    text-decoration: none;
+    color: red;
+    font-size: 11rem;
+}
+
+section:nth-of-type(2) {
+    padding: 50px 0px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section:nth-of-type(2) ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+section:nth-of-type(2) li {
+    padding-left: 100px;
+}
+
+/* TROISIEME SECTION  */
+
+figure {
+    display: flex;
+    justify-content: space-between;
+}
+
+figure div {
+    width: 45%;
+}
+
+figure img {
+    width: 100%;
+}
+
+ #parentR {
+    position: relative;
+} 
+
+
+.image-container {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+}
+
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 800; 
+    transform: translateY(100%);
+    transition: transform 1s;
+}
+
+.hover-text {
+    position: absolute;
+    top: 47%;
+    left: 32%;
+    color: red;
+    font-size: 5.8rem;
+    z-index: 900; 
+    transform: rotate(280deg) translateY(100%);
+    transition: transform 2s;
+}
+
+.image-container:hover .filter,
+.image-container:hover .hover-text {
+    z-index: 1100;
+    transform: translateY(0%);
+}
+
+.image-container:hover .hover-text {
+    transform: rotate(-45deg);
+    transition: all 2.2s;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    z-index: 1000; 
+    position: relative; 
+}
+
+.image-container:hover {
+    animation: shake 0.6s;
+    animation-iteration-count: infinite; 
+    cursor: url(../img/cursor.png), auto;
+}
+
+.colorBlack {
+    color: transparent;
+}
+
+#bandV {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    left: 47%;
+}
+
+#margin {
+    margin: 120px 0px;
+}
+
+#A {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+span {
+    font-size: 5.8rem;
+    padding: 15px 25px;
+}
+
+#bandH {
+    position: absolute;
+    top: 47%;
+    left: 40%;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-1px, 1px) rotate(1deg); }
+    30% { transform: translate(1px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }s
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* FOOTER */
+
+footer {
+    margin: 30px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
